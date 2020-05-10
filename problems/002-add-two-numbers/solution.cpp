@@ -58,6 +58,7 @@ public:
                 }
                 else
                 {
+                    if (!(prev->next)) delete prev->next;
                     prev->next = nullptr;
                 }
                 return result;
@@ -71,3 +72,4 @@ public:
     }
 };
 
+//NOTES: 对于这种使用链表的方式，可以提前生成Node，方便使用。后面判断不需要这个Node，再把这个Node删除。
